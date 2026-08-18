@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+artifacts/*
+!artifacts/.gitkeep
+reports/inference_report.json
+reports/training_report.json
+reports/evaluation.json

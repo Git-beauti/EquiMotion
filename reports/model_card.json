@@ -1,0 +1,24 @@
+{
+  "model_name": "EquiMotion",
+  "task": "20-second longitudinal position prediction for a following automated vehicle",
+  "dataset": "Car-following Trajectory Dataset",
+  "data_boundary": {
+    "training": "data/train.csv only",
+    "inference": "visible fields in data/test.csv only",
+    "test_future_fav_labels_used": false
+  },
+  "dataset_shape": {
+    "training_segments": 4517,
+    "test_segments": 1937,
+    "history_steps": 100,
+    "prediction_steps": 200,
+    "sampling_interval_seconds": 0.1
+  },
+  "components": [
+    "future-LV-conditioned state-space encoder",
+    "identity and gap dual-domain correction",
+    "third-difference ComfortGuard with prediction-only safety protection"
+  ],
+  "artifact_policy": "Pretrained weights and generated predictions are not distributed."
+}
+
